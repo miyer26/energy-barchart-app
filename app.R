@@ -144,10 +144,11 @@ app$callback(
     xlim(0,100) + 
     labs(x="Percentage %",
      y="Country") + 
-    scale_colour_distiller(palette= "Accent")
+    scale_fill_distiller(palette= "Greens", 
+    limits = 0, 100)
 
     if (top_bot == "Top"){
-       bar_cahrt <- bar_chart + ggtitle(paste0("Top ", topN, " ", "Fossil ", "Energy Consumers in ", year))
+       bar_chart <- bar_chart + ggtitle(paste0("Top ", topN, " ", "Fossil ", "Energy Consumers in ", year))
 
     } else if (top_bot == "Bottom"){
         
