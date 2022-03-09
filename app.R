@@ -132,7 +132,6 @@ app$callback(
 
         }
     
-    print(length(df_sorted))
 
     bar_chart <- ggplot(
         df_sorted,
@@ -141,7 +140,6 @@ app$callback(
            fill=percentage)) + 
     geom_bar(stat='identity') +
     geom_text(aes(label = round(percentage, 1)), hjust = 0.5, colour = "black") +
-    xlim(0,100) + 
     labs(x="Percentage %",
      y="Country") + 
     scale_fill_distiller(palette= "Greens", 
