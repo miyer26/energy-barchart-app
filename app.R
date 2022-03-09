@@ -7,7 +7,7 @@ library(RColorBrewer)
 
 app = Dash$new()
 
-df <- read.csv("./data/Primary-energy-consumption-from-fossilfuels-nuclear-renewables.csv")
+df <- read.csv(here::here('data', 'Primary-energy-consumption-from-fossilfuels-nuclear-renewables.csv'))
 
 x <- colnames(df)
 df_na <- df %>% drop_na("Code") %>% rename(
